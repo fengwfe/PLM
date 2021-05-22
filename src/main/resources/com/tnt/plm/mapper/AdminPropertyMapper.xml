@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tnt.plm.mapper.AdminPropertyMapper">
+    <select id="findById" resultType="com.tnt.plm.model.entity.AdminProperty">
+        select * from admin_property where id=#{id}
+    </select>
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into admin_property (nodeId,pKey,pValue,description,createdBy,updatedBy)
+        values(#{nodeId},#{pKey},#{pValue},#{description},#{createdBy},#{updatedBy})
+    </insert>
+    <update id="deleteById">
+        update admin_property set deleted= 1 where id=#{id}
+    </update>
+</mapper>
