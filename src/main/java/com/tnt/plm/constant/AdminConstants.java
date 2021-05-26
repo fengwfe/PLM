@@ -27,4 +27,16 @@ public interface AdminConstants {
     String NODE_KEY_ATTR_PARTS_GI_NUMBER = "ATTR_PARTS_GI_NUMBER";
     String NODE_KEY_ATTR_PARTS_GI_DESCRIPTION = "ATTR_PARTS_GI_DESCRIPTION";
 
+
+    //各种property key的定义
+    String PROP_KEY_TYPE = "TYPE";//标识对应的NODE是什么,(attribute? tab? class?...)
+    String PROP_KEY_DISPLAY = "DISPLAY";//页面显示的名称
+    String PROP_KEY_ATTR_TYPE = "ATTR_TYPE";//attribute的类型
+    String PROP_KEY_INHERIT = "INHERIT";//从哪继承过来的
+    String PROP_KEY_VISIBLE = "VISIBLE";
+    String PROP_KEY_ENABLED = "ENABLED";
+    String PROP_KEY_MAX_VALUE = "MAX_VALUE";
+    String PROP_KEY_MIN_VALUE = "MIN_VALUE";
+    String PROP_KEY_DEFAULT_VALUE = "DEFAULT_VALUE";
+
 }
