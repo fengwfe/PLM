@@ -12,6 +12,7 @@ import java.util.Date;
 @Data
 public class BaseEntity implements Serializable, PLMConstants {
     private Long id;
+    private Long workspaceId;
     private Integer deleted;
     private Integer version;
     private Date created;

@@ -3,6 +3,7 @@ drop table if exists `item`;
 
 CREATE TABLE `item` (
     `id` int unsigned NOT NULL AUTO_INCREMENT COMMENT 'pk',
+    `workspaceId` int unsigned NOT NULL COMMENT 'workspace id',
     `classId` int unsigned NOT NULL COMMENT 'class id',
     `subClassId` int unsigned NOT NULL COMMENT 'subclass id',
     `number` varchar(256) DEFAULT NULL COMMENT 'item number',
@@ -29,6 +30,7 @@ drop table if exists `admin_node`;
 
 CREATE TABLE `admin_node` (
                         `id` int unsigned NOT NULL AUTO_INCREMENT COMMENT 'pk',
+                        `workspaceId` int unsigned NOT NULL COMMENT 'workspace id',
                         `nodeKey` varchar(256) NOT NULL COMMENT '唯一key',
                         `parentId` int unsigned DEFAULT NULL COMMENT '父node节点id',
                         `description` varchar(256) DEFAULT NULL COMMENT '节点描述',
@@ -53,6 +55,7 @@ drop table if exists `admin_property`;
 
 CREATE TABLE `admin_property` (
                               `id` int unsigned NOT NULL AUTO_INCREMENT COMMENT 'pk',
+                              `workspaceId` int unsigned NOT NULL COMMENT 'workspace id',
                               `nodeId` int unsigned DEFAULT NULL COMMENT 'node节点id',
                               `pKey` varchar(256) NOT NULL COMMENT '属性key',
                               `pValue` varchar(256) DEFAULT NULL COMMENT '属性值',
